@@ -4,7 +4,7 @@ class q1 {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 
-    System.out.println("Radius of the circle: ");
+    System.out.print("Radius of the circle: ");
     double radius = input.nextFloat();
 
     double area = Math.PI*radius*radius;

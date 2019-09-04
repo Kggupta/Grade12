@@ -12,5 +12,4 @@ class q12 {
 
 		System.out.printf("Random number between %d and %d is %d", minVal, maxVal, ThreadLocalRandom.current().nextInt(minVal, maxVal + 1));
 	}
-
 }

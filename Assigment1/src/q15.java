@@ -7,7 +7,7 @@ class q15 {
 			System.out.print("Enter an integer: ");
 			String count = input.nextLine();
 			try{
-				int result = Integer.parseInt(count);
+				Integer.parseInt(count);
 				break;
 			}catch(Exception e){
 				System.out.println("Thats not an integer");

@@ -19,7 +19,7 @@ class q6 {
 
 		//WHILE LOOP 1
 		//1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
-		count = 0;
+		count = 0;//This line changed
 		while (count < 20) {
 			count ++;
 			System.out.print(count + " ");
@@ -27,9 +27,9 @@ class q6 {
 		System.out.println();
 
 		//WHILE LOOP 2
-		//1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+		//1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 		count = 1;
-		while (count <= 20) {
+		while (count <= 20) {//This line changes
 			System.out.print(count + " ");
 			count ++;
 		}

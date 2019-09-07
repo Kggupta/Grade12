@@ -10,7 +10,7 @@ class q14 {
 
 		while (true){
 			for(int i = 0;i < count;i++){
-				System.out.print("Enter number (-1 for exit): ");
+				System.out.print("Enter number: ");
 				int inputNumber = input.nextInt();
 				numbers[i] = inputNumber;
 			}

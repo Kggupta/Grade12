@@ -3,3 +3,6 @@
 .classpath
 .project
 bin/
+/Converter/nbproject/private/
+/Converter/build/
+/Converter/dist/

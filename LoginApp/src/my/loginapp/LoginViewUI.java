@@ -144,12 +144,15 @@ public class LoginViewUI extends javax.swing.JFrame {
             if(usernameInput.equals(accounts.get(i))){
                 if(accounts.get(i+1).equals(passwordInput)){
                     StatusLogin.setText("Logged In.");
+                    return;
                 }else{
                     incorectCounter++;
                     StatusLogin.setText("Incorrect Login");
+                    return;
                 }
             }
         }
+        StatusLogin.setText("Username DNE");
     }//GEN-LAST:event_SubmitbuttonActionPerformed
 
     private void usernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameFieldActionPerformed

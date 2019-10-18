@@ -33,8 +33,8 @@ public class LoginViewUI extends javax.swing.JFrame {
         PasswordLabel = new javax.swing.JLabel();
         Submitbutton = new javax.swing.JButton();
         usernameField = new javax.swing.JTextField();
-        passwordField = new javax.swing.JTextField();
         StatusLogin = new javax.swing.JLabel();
+        passwordField = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(410, 230));
@@ -63,13 +63,13 @@ public class LoginViewUI extends javax.swing.JFrame {
             }
         });
 
+        StatusLogin.setForeground(new java.awt.Color(200, 0, 0));
+
         passwordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordFieldActionPerformed(evt);
             }
         });
-
-        StatusLogin.setForeground(new java.awt.Color(200, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,17 +85,18 @@ public class LoginViewUI extends javax.swing.JFrame {
                         .addComponent(Submitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(Usernamelabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(StatusLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(PasswordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(StatusLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(PasswordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(passwordField))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(Usernamelabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(usernameField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -122,13 +123,8 @@ public class LoginViewUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SubmitbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitbuttonActionPerformed
-        if(accounts.contains("Keshav") == false){
-            accounts.add("Keshav");
-            accounts.add("hell0Wor!d");
-            accounts.add("Foo");
-            accounts.add("BarF00!"); 
-        }
-        String passwordInput = passwordField.getText();
+
+        String passwordInput = String.valueOf(passwordField.getPassword());
         String usernameInput = usernameField.getText();
 
         if(passwordInput.equals("") || usernameInput.equals("")){
@@ -160,7 +156,7 @@ public class LoginViewUI extends javax.swing.JFrame {
     }//GEN-LAST:event_usernameFieldActionPerformed
 
     private void passwordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldActionPerformed
-        
+        // TODO add your handling code here:
     }//GEN-LAST:event_passwordFieldActionPerformed
 
     /**
@@ -198,7 +194,7 @@ public class LoginViewUI extends javax.swing.JFrame {
             }
         });
     }
-    public static ArrayList<String> accounts = new ArrayList<String>();
+    static ArrayList<String> accounts = new ArrayList<String>();
     int incorectCounter = 0;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -207,7 +203,7 @@ public class LoginViewUI extends javax.swing.JFrame {
     private javax.swing.JButton Submitbutton;
     private javax.swing.JLabel TitleLogin;
     private javax.swing.JLabel Usernamelabel;
-    private javax.swing.JTextField passwordField;
+    private javax.swing.JPasswordField passwordField;
     private javax.swing.JTextField usernameField;
     // End of variables declaration//GEN-END:variables
 }

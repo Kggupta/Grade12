@@ -34,12 +34,12 @@ public class RegisterViewUI extends javax.swing.JFrame {
         ConfirmPassLabel = new javax.swing.JLabel();
         CreateAccButton = new javax.swing.JButton();
         UsernameField = new javax.swing.JTextField();
-        PasswordField = new javax.swing.JTextField();
-        ConfirmPassField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         AlertLabel = new javax.swing.JLabel();
         MatcherLabel = new javax.swing.JLabel();
+        PasswordField = new javax.swing.JPasswordField();
+        ConfirmPassField = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(410, 230));
@@ -68,18 +68,6 @@ public class RegisterViewUI extends javax.swing.JFrame {
             }
         });
 
-        PasswordField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PasswordFieldActionPerformed(evt);
-            }
-        });
-
-        ConfirmPassField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConfirmPassFieldActionPerformed(evt);
-            }
-        });
-
         jLabel1.setText("Password must have a number, ");
 
         jLabel2.setText("symbol, uppercase and lowercase letters");
@@ -103,18 +91,20 @@ public class RegisterViewUI extends javax.swing.JFrame {
                                 .addComponent(UsernameField))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(PasswordLabel)
-                                .addGap(60, 60, 60)
+                                .addGap(61, 61, 61)
                                 .addComponent(PasswordField))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(ConfirmPassLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ConfirmPassField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ConfirmPassField, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)))
+                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AlertLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, 0)
+                                .addComponent(AlertLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(MatcherLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 28, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addGroup(layout.createSequentialGroup()
@@ -134,14 +124,16 @@ public class RegisterViewUI extends javax.swing.JFrame {
                     .addComponent(UsernameLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PasswordLabel)
-                    .addComponent(AlertLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AlertLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ConfirmPassLabel)
-                    .addComponent(ConfirmPassField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MatcherLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MatcherLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(ConfirmPassLabel)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(ConfirmPassField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -162,23 +154,21 @@ public class RegisterViewUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UsernameFieldActionPerformed
 
-    private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PasswordFieldActionPerformed
-
-    private void ConfirmPassFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmPassFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ConfirmPassFieldActionPerformed
-
     private void CreateAccButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateAccButtonActionPerformed
-        String passwordSelect = PasswordField.getText();
+        String passwordSelect = String.valueOf(PasswordField.getPassword());
         String usernameSelect = UsernameField.getText();
         
         if(passwordSelect.matches(".*\\d.*") && passwordSelect.matches("(?s).*[A-Z].*") && passwordSelect.matches(".*\\W.*")){
-            if(!passwordSelect.equals(ConfirmPassField.getText())){
+            if(!passwordSelect.equals(String.valueOf(ConfirmPassField.getPassword()))){
                 MatcherLabel.setText("Does not match");
                 AlertLabel.setText("");
                 return;
+            }
+            for (int i = 0; i < my.loginapp.LoginViewUI.accounts.size(); i++) {
+                if(my.loginapp.LoginViewUI.accounts.get(i).equals(usernameSelect)){
+                    AlertLabel.setText("Cant Make Account");
+                    return;
+                }
             }
             AlertLabel.setText("Account Made");
             my.loginapp.LoginViewUI.accounts.add(usernameSelect);
@@ -227,11 +217,11 @@ public class RegisterViewUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AlertLabel;
-    private javax.swing.JTextField ConfirmPassField;
+    private javax.swing.JPasswordField ConfirmPassField;
     private javax.swing.JLabel ConfirmPassLabel;
     private javax.swing.JButton CreateAccButton;
     private javax.swing.JLabel MatcherLabel;
-    private javax.swing.JTextField PasswordField;
+    private javax.swing.JPasswordField PasswordField;
     private javax.swing.JLabel PasswordLabel;
     private javax.swing.JLabel TitleRegister;
     private javax.swing.JTextField UsernameField;

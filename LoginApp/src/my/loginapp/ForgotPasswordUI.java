@@ -32,8 +32,8 @@ public class ForgotPasswordUI extends javax.swing.JFrame {
         UsernameFieldFP = new javax.swing.JTextField();
         SetPasswordButton = new javax.swing.JButton();
         passwordReturn = new javax.swing.JLabel();
-        NewPassField = new javax.swing.JTextField();
         ReturnHelper = new javax.swing.JLabel();
+        NewPassField = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 400, 230));
@@ -72,7 +72,7 @@ public class ForgotPasswordUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(UsernameFieldFP, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                             .addComponent(NewPassField))
-                        .addGap(18, 18, 18)
+                        .addGap(23, 23, 23)
                         .addComponent(ReturnHelper, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -92,8 +92,8 @@ public class ForgotPasswordUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NewPassField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ReturnHelper, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ReturnHelper, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NewPassField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(SetPasswordButton)
                 .addGap(18, 18, 18))
@@ -104,7 +104,7 @@ public class ForgotPasswordUI extends javax.swing.JFrame {
 
     private void SetPasswordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetPasswordButtonActionPerformed
         String getUsername = UsernameFieldFP.getText();
-        String getPass = NewPassField.getText();
+        String getPass = String.valueOf(NewPassField.getPassword());
         System.out.println(my.loginapp.LoginViewUI.accounts + "heyo");
         if(getPass.matches(".*\\d.*") && getPass.matches("(?s).*[A-Z].*") && getPass.matches(".*\\W.*")){
             for (int i=0; i < my.loginapp.LoginViewUI.accounts.size();i++){
@@ -158,7 +158,7 @@ public class ForgotPasswordUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ForgotPassTitle;
-    private javax.swing.JTextField NewPassField;
+    private javax.swing.JPasswordField NewPassField;
     private javax.swing.JLabel ReturnHelper;
     private javax.swing.JButton SetPasswordButton;
     private javax.swing.JTextField UsernameFieldFP;

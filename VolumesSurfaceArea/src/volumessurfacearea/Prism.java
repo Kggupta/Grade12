@@ -44,17 +44,17 @@ public class Prism {
 
     public void assignSideLengths(){
        while(true){
-            this.height = getSideLength("What is the height of the Prism?");
+            this.height = getSideLength("What is the height of the Prism? ");
             if (this.height > 0) break;
             else System.out.println("The Side Length cannot be less than 0.");
        }
        while(true){
-            this.width = getSideLength("What is the width of the Prism?");
+            this.width = getSideLength("What is the width of the Prism? ");
             if (this.width > 0) break;
             else System.out.println("The Side Length cannot be less than 0.");
        }
        while(true){
-            this.depth = getSideLength("What is the depth of the Prism?");
+            this.depth = getSideLength("What is the depth of the Prism? ");
             if (this.depth > 0) break;
             else System.out.println("The Side Length cannot be less than 0.");
        }
@@ -63,11 +63,16 @@ public class Prism {
     public double calcVolume(){
         return this.depth * this.width * this.height;
     }
-
+    
+    public double calcSurfaceArea(){
+        return 2 * (this.depth * this.width + this.depth * this.height + this.width * this.height);
+    }
+    
     public static void main(String[] args) {
         Prism shape1 = new Prism();
         shape1.assignSideLengths();
-
+        shape1.volume = shape1.calcVolume();
+        shape1.surfaceArea = shape1.calcSurfaceArea();
 
     }
 

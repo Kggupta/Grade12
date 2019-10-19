@@ -11,7 +11,7 @@
       - Make sure said inputs are possible for the shape given (for example triangular based prism: side1 + side2 must be > side3)
 4. Calculations:
     - Calculate volume
-          - Use formula (depends on the shape) with the given variables passed as attributes to method
+        - Use formula (depends on the shape) with the given variables passed as attributes to method
         - Each different shape will have an overridden form with a different formula of the volume method in base "Prism" superclass
     - Calculate Surface area
         - Again, use formula depending on shape with the necessary variables passed as attributes to method

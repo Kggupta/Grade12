@@ -17,7 +17,7 @@
 5. Display Results (volume and surface area) as well as the given variables
 
 ## UML DIAGRAM
-[![UML Table Image](https://i.gyazo.com/1ad25a01076725f05ef02612baf5e57f.png)](https://gyazo.com/1ad25a01076725f05ef02612baf5e57f)
+[![UML Diagram](https://i.gyazo.com/57ce654203aaaaf6c0f2588ce91de3a5.png)](https://gyazo.com/57ce654203aaaaf6c0f2588ce91de3a5)
 
 ## PSEUDOCODE
 

@@ -19,7 +19,7 @@ public class Prism {
     double surfaceArea;
     double volume;
     String shapeName;
-    
+
     //Prism constructor i want name of shape initialized as Prism
     public Prism(){
         shapeName = "Prism";
@@ -58,6 +58,10 @@ public class Prism {
             if (this.depth > 0) break;
             else System.out.println("The Side Length cannot be less than 0.");
        }
+    }
+
+    public double calcVolume(){
+        return this.depth * this.width * this.height;
     }
 
     public static void main(String[] args) {

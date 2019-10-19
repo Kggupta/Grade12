@@ -69,7 +69,7 @@ public class Prism {
     }
     
     public void outputResults(){
-        System.out.format("The %s's volume is %s units cubed\n The %s's surface area is %s units squared", this.shapeName,this.volume, this.shapeName, this.surfaceArea);
+        System.out.format("The %s's volume is %s units cubed\nThe %s's surface area is %s units squared", this.shapeName,this.volume, this.shapeName, this.surfaceArea);
     }
     
     public static void main(String[] args) {

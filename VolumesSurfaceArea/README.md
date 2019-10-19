@@ -7,8 +7,7 @@
 3. Get all inputs for the dimensions of the shape
     - Height, width, depth for almost all shapes
       - Radius for sphere
-      - Side lengths for triangle-based shapes
-      - Make sure said inputs are possible for the shape given (for example triangular based prism: side1 + side2 must be > side3)
+      - Special heights for triangle-based shapes
 4. Calculations:
     - Calculate volume
         - Use formula (depends on the shape) with the given variables passed as attributes to method
@@ -17,3 +16,6 @@
         - Again, use formula depending on shape with the necessary variables passed as attributes to method
          - Overridden form of the surface area method in "Prism" superclass
 5. Display Results (volume and surface area) as well as the given variables
+
+## UML Diagram
+![UML Table Image](https://gyazo.com/1ad25a01076725f05ef02612baf5e57f)

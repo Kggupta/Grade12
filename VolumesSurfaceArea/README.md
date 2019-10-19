@@ -38,7 +38,7 @@
 5. Calculate volume
     - Using the inputted values, run them through the formula in the overloaded calcVolume method or the normal calcVolume method if it is a prism object (depends on the shape chosen)
         - Prism: length \* width \* height
-        - Sphere: 4/3 \* π \* radius
+        - Sphere: 4/3 \* π \* radius ^ 3
         - Cylinder: (π \* radius ^ 2) \* height
         - Cone: π * r ^ 2 \* (height / 3)
         - Square Based Pyramid: (width ^ 3) \* (height / 3)

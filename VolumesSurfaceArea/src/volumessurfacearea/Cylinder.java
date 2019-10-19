@@ -10,5 +10,33 @@ package volumessurfacearea;
  * @author keshavgupta
  */
 public class Cylinder extends Shape{
+    double radius;
     
+    public Cylinder(){
+        shapeName = "Cylinder";
+    }
+    
+    @Override//override annotation
+    public void assignSideLengths(){
+       while(true){//get radius of cylinder see shape.java for indepth comments
+            this.radius = getSideLength("What is the radius of the base of the Cylinder? ");
+            if (this.radius > 0) break;
+            else System.out.println("The radius cannot be less than 0.");
+       }
+        while(true){//get height of cylinder see shape.java for indepth comments
+            this.height = getSideLength("What is the height of the Cylinder? ");
+            if (this.height > 0) break;
+            else System.out.println("The height cannot be less than 0.");
+       }
+    }
+    
+    @Override
+    public double calcVolume(){//method to calculate volume
+        return Math.PI * this.radius * this.radius * this.height;
+    }
+    
+    @Override
+    public double calcSurfaceArea(){//method to calculate surface area
+        return (2 * Math.PI * this.radius * this.radius) + 2 * Math.PI * this.radius * this.height;
+    }
 }

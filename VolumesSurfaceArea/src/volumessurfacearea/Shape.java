@@ -72,7 +72,7 @@ public class Shape {
     }
 
     public void outputResults(){//Output the calculated results
-        System.out.format("The %s's volume is %s units cubed\nThe %s's surface area is %s units squared", this.shapeName,this.volume, this.shapeName, this.surfaceArea);
+        System.out.format("The %s's volume is %.2f units cubed\nThe %s's surface area is %.2f units squared\n\n", this.shapeName,this.volume, this.shapeName, this.surfaceArea);
     }
 
     public static void main(String[] args) {//Main code
@@ -82,6 +82,13 @@ public class Shape {
         shape1.volume = shape1.calcVolume();//calculate prism volume based on lengths
         shape1.surfaceArea = shape1.calcSurfaceArea();//calculate surface area based on lengths
         shape1.outputResults();//output values to user
+        
+        Sphere shape2 = new Sphere();//New sphere
+        shape2.assignSideLengths();
+        shape2.volume = shape2.calcVolume();
+        shape2.surfaceArea = shape2.calcSurfaceArea();
+        shape2.outputResults();
+                
     }
 
 }

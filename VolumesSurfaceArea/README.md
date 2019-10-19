@@ -24,33 +24,33 @@
 1. Give user instructions
 2. Get what shape they want to calculate (or exit)
     - Assign each shape a number and prompt them to select a number from the given list Prism = 1, Square Pyramid = 5
-    - Make sure input is integer and within 1 to 5
-3. Depending on selected shape, instansiate object using the corresponding shape class
+    - Make sure input is an integer and within 1 to 5
+3. Depending on the selected shape, instantiate an object using the corresponding shape class
 4. Get required attributes
-	- Prism: length, width, height
-	- Sphere: radius
-	- Cylinder: height, radius
-	- Cone: height, radius
-	- Square Pyramid: width, height
-  	- Inputs will vary depending on shape
-	- Make sure inputs are a double and positive input
+    - Prism: length, width, height
+    - Sphere: radius
+    - Cylinder: height, radius
+    - Cone: height, radius
+    - Square Pyramid: width, height
+      - Inputs will vary depending on the shape
+    - Make sure inputs are a double and positive input
 5. Calculate volume
-	- Using the inputed values, run them through the formula in the overloaded calcVolume method or the normal calcVolume method if it is a prism object (depends on shape chosen)
-		- Prism: length \* width \* height
-		- Sphere: 4/3 \* π \* radius
-		- Cylinder: (π \* radius ^ 2) \* height
-		- Cone: π * r ^ 2 \* (height / 3)
-		- Square Based Pyramid: (width ^ 3) \* (height / 3)
-	- Assign resulting volume to the volume attribute
+    - Using the inputted values, run them through the formula in the overloaded calcVolume method or the normal calcVolume method if it is a prism object (depends on the shape chosen)
+        - Prism: length \* width \* height
+        - Sphere: 4/3 \* π \* radius
+        - Cylinder: (π \* radius ^ 2) \* height
+        - Cone: π * r ^ 2 \* (height / 3)
+        - Square Based Pyramid: (width ^ 3) \* (height / 3)
+    - Assign resulting volume to the volume attribute
 6. Calculate Surface Area
-	- Using the inputed values, run them through the formula in the overloaded calcSurfaceArea method or the normal calcSurfaceArea method if it is a prism object (depends on shape chosen)
-		- Prism: 2(length \* width + length \* height + width \* height)
-		- Sphere: 4 \* π \* radius ^ 2
-		- Cylinder: 2 \* π \* radius ^ 2 + 2 \* π \* radius \* height
-		- Cone: π \* radius(radius + sqrt(height ^ 2 + radius ^ 2))
-		- Sqaure Based Pyramid: width ^ 2 + 2 \* width \* sqrt((width ^ 2)/4 + height ^ 2)
-	- Assign resulting surface area to the surfaceArea attribute
+    - Using the inputted values, run them through the formula in the overloaded calcSurfaceArea method or the normal calcSurfaceArea method if it is a prism object (depends on the shape chosen)
+        - Prism: 2(length \* width + length \* height + width \* height)
+        - Sphere: 4 \* π \* radius ^ 2
+        - Cylinder: 2 \* π \* radius ^ 2 + 2 \* π \* radius \* height
+        - Cone: π \* radius(radius + sqrt(height ^ 2 + radius ^ 2))
+        - Square Based Pyramid: width ^ 2 + 2 \* width \* sqrt((width ^ 2)/4 + height ^ 2)
+    - Assign resulting surface area to the surfaceArea attribute
 7. Output results
-	- Using the calculated volume and surface area in the previous step, print the values
+    - Using the calculated volume and surface area in the previous step, print the values
 8. Ask the user if they want to calculate another shape
-	- Return to step 1
+    - Return to step 1

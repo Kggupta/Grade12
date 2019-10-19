@@ -68,12 +68,16 @@ public class Prism {
         return 2 * (this.depth * this.width + this.depth * this.height + this.width * this.height);
     }
     
+    public void outputResults(){
+        System.out.format(this.shapeName + "'s volume is: " + this.volume + " units cubed \nSurface area is: " + this.surfaceArea + " units squared");
+    }
+    
     public static void main(String[] args) {
         Prism shape1 = new Prism();
         shape1.assignSideLengths();
         shape1.volume = shape1.calcVolume();
         shape1.surfaceArea = shape1.calcSurfaceArea();
-
+        shape1.outputResults();
     }
 
 }

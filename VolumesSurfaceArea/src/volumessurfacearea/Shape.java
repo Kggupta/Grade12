@@ -95,6 +95,11 @@ public class Shape {
         shape3.surfaceArea = shape3.calcSurfaceArea();
         shape3.outputResults();
         
+        Cone shape4 = new Cone();//New cone
+        shape4.assignSideLengths();
+        shape4.volume = shape4.calcVolume();
+        shape4.surfaceArea = shape4.calcSurfaceArea();
+        shape4.outputResults();
         
                 
     }

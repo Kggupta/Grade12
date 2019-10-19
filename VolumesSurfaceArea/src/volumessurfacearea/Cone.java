@@ -9,6 +9,6 @@ package volumessurfacearea;
  *
  * @author keshavgupta
  */
-public class Cone extends Prism{
+public class Cone extends Shape{
     
 }

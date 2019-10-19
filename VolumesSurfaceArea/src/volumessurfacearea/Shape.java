@@ -13,7 +13,7 @@ import java.util.InputMismatchException;
  */
 
 //Superclass Prism
-public class Prism {
+public class Shape {
     //All essential attributes
     double depth;
     double width;
@@ -23,7 +23,7 @@ public class Prism {
     String shapeName;
 
     //Prism constructor i want name of shape initialized as Prism
-    public Prism(){
+    public Shape(){
         shapeName = "Prism";
     }
 
@@ -77,7 +77,7 @@ public class Prism {
 
     public static void main(String[] args) {//Main code
         //test shapes
-        Prism shape1 = new Prism();//New prism
+        Shape shape1 = new Shape();//New prism
         shape1.assignSideLengths();//assign the prism it's sides
         shape1.volume = shape1.calcVolume();//calculate prism volume based on lengths
         shape1.surfaceArea = shape1.calcSurfaceArea();//calculate surface area based on lengths

@@ -9,6 +9,6 @@ package volumessurfacearea;
  *
  * @author keshavgupta
  */
-public class Cylinder extends Prism{
+public class Cylinder extends Shape{
     
 }

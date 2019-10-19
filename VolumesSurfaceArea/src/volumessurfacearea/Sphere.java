@@ -9,6 +9,6 @@ package volumessurfacearea;
  *
  * @author keshavgupta
  */
-public class Sphere {
+public class Sphere extends Shape{
     
 }

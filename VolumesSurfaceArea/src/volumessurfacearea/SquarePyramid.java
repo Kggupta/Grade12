@@ -9,6 +9,6 @@ package volumessurfacearea;
  *
  * @author keshavgupta
  */
-public class SquarePyramid extends Prism{
+public class SquarePyramid extends Shape{
     
 }

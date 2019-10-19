@@ -88,6 +88,14 @@ public class Shape {
         shape2.volume = shape2.calcVolume();
         shape2.surfaceArea = shape2.calcSurfaceArea();
         shape2.outputResults();
+
+        Cylinder shape3 = new Cylinder();//New cylinder
+        shape3.assignSideLengths();
+        shape3.volume = shape3.calcVolume();
+        shape3.surfaceArea = shape3.calcSurfaceArea();
+        shape3.outputResults();
+        
+        
                 
     }
 

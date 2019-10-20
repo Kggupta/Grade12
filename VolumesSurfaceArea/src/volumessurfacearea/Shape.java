@@ -74,38 +74,36 @@ public class Shape {
     public void outputResults(){//Output the calculated results
         System.out.format("The %s's volume is %.2f units cubed\nThe %s's surface area is %.2f units squared\n\n", this.shapeName,this.volume, this.shapeName, this.surfaceArea);
     }
-
+    
+    public static int chooseShape(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("1 : Prism");
+        System.out.println("2 : Sphere");
+        System.out.println("3 : Cylinder");
+        System.out.println("4 : Cone");
+        System.out.println("5 : Square Based Pyramid");
+        System.out.println("-1 : Exit");
+        
+        int choice;
+        while(true){
+            System.out.print("What shape would you like to calculate? ");
+            try{
+                choice = input.nextInt();
+                break;
+            }catch(InputMismatchException err){
+                System.out.println("Not a valid Choice.");
+            }      
+        } 
+        return choice;
+    }
+    
     public static void main(String[] args) {//Main code
-        //test shapes
         Shape shape1 = new Shape();//New prism
-        shape1.assignSideLengths();//assign the prism it's sides
-        shape1.volume = shape1.calcVolume();//calculate prism volume based on lengths
-        shape1.surfaceArea = shape1.calcSurfaceArea();//calculate surface area based on lengths
-        shape1.outputResults();//output values to user
+        Sphere shape2 = new Sphere();
+        Cylinder shape3 = new Cylinder();
+        Cone shape4 = new Cone();
+        SquarePyramid shape5 = new SquarePyramid();
         
-        Sphere shape2 = new Sphere();//New sphere
-        shape2.assignSideLengths();
-        shape2.volume = shape2.calcVolume();
-        shape2.surfaceArea = shape2.calcSurfaceArea();
-        shape2.outputResults();
-
-        Cylinder shape3 = new Cylinder();//New cylinder
-        shape3.assignSideLengths();
-        shape3.volume = shape3.calcVolume();
-        shape3.surfaceArea = shape3.calcSurfaceArea();
-        shape3.outputResults();
-        
-        Cone shape4 = new Cone();//New cone
-        shape4.assignSideLengths();
-        shape4.volume = shape4.calcVolume();
-        shape4.surfaceArea = shape4.calcSurfaceArea();
-        shape4.outputResults();
-        
-        SquarePyramid shape5 = new SquarePyramid();//New square pyramid
-        shape5.assignSideLengths();
-        shape5.volume = shape5.calcVolume();
-        shape5.surfaceArea = shape5.calcSurfaceArea();
-        shape5.outputResults();                
     }
 
 }

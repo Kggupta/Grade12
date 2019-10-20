@@ -11,4 +11,31 @@ package volumessurfacearea;
  */
 public class SquarePyramid extends Shape{
     
+    public SquarePyramid(){
+        shapeName = "Square Based Pyramid";
+    }
+    
+    @Override//override annotation
+    public void assignSideLengths(){
+       while(true){//get radius of sphere see shape.java for indepth comments
+            this.width = getSideLength("What is the width of the Square Base? ");
+            if (this.width > 0) break;
+            else System.out.println("The width cannot be less than 0.");
+       }
+       while(true){//get radius of sphere see shape.java for indepth comments
+            this.height = getSideLength("What is the height of the pyramid? ");
+            if (this.height > 0) break;
+            else System.out.println("The width cannot be less than 0.");
+       }
+    }
+    
+    @Override
+    public double calcVolume(){//method to calculate volume
+        return this.width * this.width * (this.height/3);
+    }
+    
+    @Override
+    public double calcSurfaceArea(){//method to calculate surface area
+        return this.width * this.width + 2 * this.width * Math.sqrt(((this.width * this.width)/4) + this.height * this.height);
+    }
 }

@@ -74,7 +74,7 @@ public class Shape {
     public void outputResults(){//Output the calculated results
         System.out.format("The %s's volume is %.2f units cubed\nThe %s's surface area is %.2f units squared\n\n", this.shapeName,this.volume, this.shapeName, this.surfaceArea);
     }
-    
+
     public static int chooseShape(){
         Scanner input = new Scanner(System.in);
         System.out.println("1 : Prism");
@@ -83,7 +83,7 @@ public class Shape {
         System.out.println("4 : Cone");
         System.out.println("5 : Square Based Pyramid");
         System.out.println("-1 : Exit");
-        
+
         int choice;
         while(true){
             System.out.print("What shape would you like to calculate? ");
@@ -92,18 +92,59 @@ public class Shape {
                 break;
             }catch(InputMismatchException err){
                 System.out.println("Not a valid Choice.");
-            }      
-        } 
+            }
+        }
         return choice;
     }
-    
+
     public static void main(String[] args) {//Main code
         Shape shape1 = new Shape();//New prism
         Sphere shape2 = new Sphere();
         Cylinder shape3 = new Cylinder();
         Cone shape4 = new Cone();
         SquarePyramid shape5 = new SquarePyramid();
-        
+
+        while(true){//main code that is running
+            int option = chooseShape();//get user's choice of shape
+            switch(option){//depending on option, run that shape code
+                case -1://exit
+                    System.exit(0);
+                    break;
+                case 1://prism
+                    shape1.assignSideLengths();//assign the prism it's sides
+                    shape1.volume = shape1.calcVolume();//calculate prism volume based on lengths
+                    shape1.surfaceArea = shape1.calcSurfaceArea();//calculate surface area based on lengths
+                    shape1.outputResults();//output values to user
+                    break;
+                case 2://sphere: see prism case for detailed comments
+                    shape2.assignSideLengths();
+                    shape2.volume = shape2.calcVolume();
+                    shape2.surfaceArea = shape2.calcSurfaceArea();
+                    shape2.outputResults();
+                    break;
+                case 3://cylinder: see prism case for detailed comments
+                    shape3.assignSideLengths();
+                    shape3.volume = shape3.calcVolume();
+                    shape3.surfaceArea = shape3.calcSurfaceArea();
+                    shape3.outputResults();
+                    break;
+                case 4://cone: see prism case for detailed comments
+                    shape4.assignSideLengths();
+                    shape4.volume = shape4.calcVolume();
+                    shape4.surfaceArea = shape4.calcSurfaceArea();
+                    shape4.outputResults();
+                    break;
+                case 5://square based pyramid: see prism case for detailed comments
+                    shape5.assignSideLengths();
+                    shape5.volume = shape5.calcVolume();
+                    shape5.surfaceArea = shape5.calcSurfaceArea();
+                    shape5.outputResults();
+                    break;
+                default://if not within -1-5
+                    System.out.println("Please enter a number from -1-5");
+                    break;
+            }
+        }
     }
 
 }

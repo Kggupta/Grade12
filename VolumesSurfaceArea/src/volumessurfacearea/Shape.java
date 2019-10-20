@@ -101,7 +101,11 @@ public class Shape {
         shape4.surfaceArea = shape4.calcSurfaceArea();
         shape4.outputResults();
         
-                
+        SquarePyramid shape5 = new SquarePyramid();//New square pyramid
+        shape5.assignSideLengths();
+        shape5.volume = shape5.calcVolume();
+        shape5.surfaceArea = shape5.calcSurfaceArea();
+        shape5.outputResults();                
     }
 
 }

@@ -96,14 +96,13 @@ public class Shape {
         }
         return choice;
     }
-
-    public static void main(String[] args) {//Main code
+    
+    private static void run3dShapes(){
         Shape shape1 = new Shape();//New prism
         Sphere shape2 = new Sphere();
         Cylinder shape3 = new Cylinder();
         Cone shape4 = new Cone();
         SquarePyramid shape5 = new SquarePyramid();
-
         while(true){//main code that is running
             int option = chooseShape();//get user's choice of shape
             switch(option){//depending on option, run that shape code
@@ -147,4 +146,7 @@ public class Shape {
         }
     }
 
+    public static void main(String[] args) {//Main code
+        run3dShapes();
+    }
 }

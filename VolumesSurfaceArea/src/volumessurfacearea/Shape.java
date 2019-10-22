@@ -99,12 +99,12 @@ public class Shape {
     
     private static void run3dShapes(){
         Shape shape1 = new Shape();//New prism
-        Sphere shape2 = new Sphere();
-        Cylinder shape3 = new Cylinder();
-        Cone shape4 = new Cone();
-        SquarePyramid shape5 = new SquarePyramid();
+        Sphere shape2 = new Sphere();//New sphere
+        Cylinder shape3 = new Cylinder();//New cylinder
+        Cone shape4 = new Cone();//New Cone
+        SquarePyramid shape5 = new SquarePyramid();//New SquarePyramid
         
-        while(true){//main code that is running
+        while(true){//main code that is running for 3d shapes
             int option = chooseShape();//get user's choice of shape
             switch(option){//depending on option, run that shape code
                 case 0://exit
@@ -140,7 +140,7 @@ public class Shape {
                     shape5.surfaceArea = shape5.calcSurfaceArea();
                     shape5.outputResults();
                     break;
-                default://if not within -1-5
+                default://if not within 0-5
                     System.out.println("Please enter a number from 0-5");
                     break;
             }

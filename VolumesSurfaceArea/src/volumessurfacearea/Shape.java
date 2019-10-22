@@ -82,7 +82,7 @@ public class Shape {
         System.out.println("3 : Cylinder");
         System.out.println("4 : Cone");
         System.out.println("5 : Square Based Pyramid");
-        System.out.println("-1 : Exit");
+        System.out.println("0 : Exit");
 
         int choice;
         while(true){
@@ -103,10 +103,11 @@ public class Shape {
         Cylinder shape3 = new Cylinder();
         Cone shape4 = new Cone();
         SquarePyramid shape5 = new SquarePyramid();
+        
         while(true){//main code that is running
             int option = chooseShape();//get user's choice of shape
             switch(option){//depending on option, run that shape code
-                case -1://exit
+                case 0://exit
                     System.exit(0);
                     break;
                 case 1://prism

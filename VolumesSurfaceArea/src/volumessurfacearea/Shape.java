@@ -141,7 +141,7 @@ public class Shape {
                     shape5.outputResults();
                     break;
                 default://if not within -1-5
-                    System.out.println("Please enter a number from -1-5");
+                    System.out.println("Please enter a number from 0-5");
                     break;
             }
         }

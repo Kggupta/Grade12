@@ -63,12 +63,12 @@ public class Shape {
        }
     }
 
-    public double calcVolume(){//method to calculate volume
-        return this.depth * this.width * this.height;
+    public void calcVolume(){//method to calculate volume
+        this.volume = this.depth * this.width * this.height;
     }
 
-    public double calcSurfaceArea(){//method to calculate surface area
-        return 2 * (this.depth * this.width + this.depth * this.height + this.width * this.height);
+    public void calcSurfaceArea(){//method to calculate surface area
+        this.surfaceArea = 2 * (this.depth * this.width + this.depth * this.height + this.width * this.height);
     }
 
     public void outputResults(){//Output the calculated results

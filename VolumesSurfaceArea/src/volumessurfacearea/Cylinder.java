@@ -31,12 +31,12 @@ public class Cylinder extends Shape{
     }
     
     @Override
-    public double calcVolume(){//method to calculate volume
-        return Math.PI * this.radius * this.radius * this.height;
+    public void calcVolume(){//method to calculate volume
+        this.volume = Math.PI * this.radius * this.radius * this.height;
     }
     
     @Override
-    public double calcSurfaceArea(){//method to calculate surface area
-        return (2 * Math.PI * this.radius * this.radius) + 2 * Math.PI * this.radius * this.height;
+    public void calcSurfaceArea(){//method to calculate surface area
+        this.surfaceArea = (2 * Math.PI * this.radius * this.radius) + 2 * Math.PI * this.radius * this.height;
     }
 }

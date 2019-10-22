@@ -30,12 +30,12 @@ public class SquarePyramid extends Shape{
     }
     
     @Override
-    public double calcVolume(){//method to calculate volume
-        return this.width * this.width * (this.height/3);
+    public void calcVolume(){//method to calculate volume
+        this.volume = this.width * this.width * (this.height/3);
     }
     
     @Override
-    public double calcSurfaceArea(){//method to calculate surface area
-        return this.width * this.width + 2 * this.width * Math.sqrt(((this.width * this.width)/4) + this.height * this.height);
+    public void calcSurfaceArea(){//method to calculate surface area
+        this.surfaceArea = this.width * this.width + 2 * this.width * Math.sqrt(((this.width * this.width)/4) + this.height * this.height);
     }
 }

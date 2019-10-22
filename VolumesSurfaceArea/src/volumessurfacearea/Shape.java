@@ -75,7 +75,7 @@ public class Shape {
         System.out.format("The %s's volume is %.2f units cubed\nThe %s's surface area is %.2f units squared\n\n", this.shapeName,this.volume, this.shapeName, this.surfaceArea);
     }
 
-    public static int chooseShape(){
+    private static int chooseShape(){
         Scanner input = new Scanner(System.in);
         System.out.println("1 : Prism");
         System.out.println("2 : Sphere");

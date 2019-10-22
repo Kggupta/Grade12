@@ -26,7 +26,7 @@
     - Exit if input = 0
     - Assign each shape a number and prompt them to select a number from the given list Prism = 1, Square Pyramid = 5
     - Make sure input is an integer and within 1 to 5
-3. Depending on the selected shape, instantiate an object using the corresponding shape class
+3. Depending on the selected shape, run the set of methods associated with its calculations and output (specified below)
 4. Get required attributes
     - Prism: length, width, height
     - Sphere: radius

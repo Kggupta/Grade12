@@ -1,12 +1,13 @@
 # Planning
 
 ## ALGORITHM
-1. Ask the user what shape they are specifying
-2. Create an object for whatever 3D shape the user chose
-    - Prism, Sphere, Square Based Pyramid, etc.
-3. Get all inputs for the dimensions of the shape
+1. Ask the user what shape type they are specifying (2D or 3D)
+2. Create the objects for whatever 3D/2D shapes the user chose and change directories with the corresponding shape type
+    - Prism, Sphere, Square Based Pyramid, Triangle, circle etc.
+3. Get all inputs for the dimensions of the shape and make sure they are double values > 0
     - Height, width, depth for almost all shapes
       - Radius for sphere
+      - Make sure triangle input (possible inputs) is valid before continues
 4. Calculations:
     - Calculate volume
         - Use formula (depends on the shape) with the given variables passed as attributes to method
@@ -14,7 +15,13 @@
     - Calculate Surface area
         - Again, use formula depending on shape with the necessary variables passed as attributes to method
          - Overridden form of the surface area method in "Prism" superclass
-5. Display Results (volume and surface area) as well as the given variables
+    - Calculate perimeter
+    	  - Add all the side lengths based on inputed values
+        - Overridden form of the perimeter method in twoDshape
+    - Calculate area
+				- Depending on formula, set value of area
+        - Overridden form of the area method in twoDshape
+5. Display Results (volume, surface area or area, perimeter)
 
 ## UML DIAGRAM
 [![UML Diagram](https://i.gyazo.com/9c467cac42b4b51a0cafa6d63ca4f289.png)](https://gyazo.com/9c467cac42b4b51a0cafa6d63ca4f289)

@@ -7,11 +7,8 @@ package excecuteProgram;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import volumessurfacearea.Cone;
-import volumessurfacearea.Cylinder;
-import volumessurfacearea.Shape;
-import volumessurfacearea.Sphere;
-import volumessurfacearea.SquarePyramid;
+import volumessurfacearea.*;
+import twoDimShapes.*;
 
 /**
  *

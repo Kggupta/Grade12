@@ -26,12 +26,12 @@ public class Sphere extends Shape{
     }
     
     @Override
-    public void calcVolume(){//method to calculate volume
+    public void setVolume(){//method to calculate volume
         this.volume = 4.18879 * Math.pow(this.radius,3);
     }
     
     @Override
-    public void calcSurfaceArea(){//method to calculate surface area
+    public void setSurfaceArea(){//method to calculate surface area
         this.surfaceArea = 4 * Math.PI * (this.radius * this.radius);
     }
     

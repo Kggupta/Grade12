@@ -31,12 +31,12 @@ public class Cone extends Shape{
     }
     
     @Override
-    public void calcVolume(){//method to calculate volume
+    public void setVolume(){//method to calculate volume
         this.volume = Math.PI * this.radius * this.radius * (this.height / 3);
     }
     
     @Override
-    public void calcSurfaceArea(){//method to calculate surface area
+    public void setSurfaceArea(){//method to calculate surface area
         this.surfaceArea = Math.PI * this.radius * (this.radius + Math.sqrt(this.height * this.height + this.radius * this.radius));
     }
 }

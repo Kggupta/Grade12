@@ -10,7 +10,7 @@ package volumessurfacearea;
  * @author keshavgupta
  */
 public class Sphere extends Shape{
-    double radius;
+    private double radius;
     
     public Sphere(){
         shapeName = "Sphere";
@@ -26,13 +26,13 @@ public class Sphere extends Shape{
     }
     
     @Override
-    public double calcVolume(){//method to calculate volume
-        return 4.18879 * Math.pow(this.radius,3);
+    public void setVolume(){//method to calculate volume
+        this.volume = 4.18879 * Math.pow(this.radius,3);
     }
     
     @Override
-    public double calcSurfaceArea(){//method to calculate surface area
-        return 4 * Math.PI * (this.radius * this.radius);
+    public void setSurfaceArea(){//method to calculate surface area
+        this.surfaceArea = 4 * Math.PI * (this.radius * this.radius);
     }
     
 }

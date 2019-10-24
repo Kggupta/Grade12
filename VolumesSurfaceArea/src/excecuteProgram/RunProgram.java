@@ -3,10 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package volumessurfacearea;
+package excecuteProgram;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import volumessurfacearea.Cone;
+import volumessurfacearea.Cylinder;
+import volumessurfacearea.Shape;
+import volumessurfacearea.Sphere;
+import volumessurfacearea.SquarePyramid;
 
 /**
  *
@@ -49,32 +54,32 @@ public class RunProgram{
                     break;
                 case 1://prism
                     shape1.assignSideLengths();//assign the prism it's sides
-                    shape1.volume = shape1.calcVolume();//calculate prism volume based on lengths
-                    shape1.surfaceArea = shape1.calcSurfaceArea();//calculate surface area based on lengths
+                    shape1.setVolume();//calculate prism volume based on lengths
+                    shape1.setSurfaceArea();//calculate surface area based on lengths
                     shape1.outputResults();//output values to user
                     break;
                 case 2://sphere: see prism case for detailed comments
                     shape2.assignSideLengths();
-                    shape2.volume = shape2.calcVolume();
-                    shape2.surfaceArea = shape2.calcSurfaceArea();
+                    shape2.setVolume();
+                    shape2.setSurfaceArea();
                     shape2.outputResults();
                     break;
                 case 3://cylinder: see prism case for detailed comments
                     shape3.assignSideLengths();
-                    shape3.volume = shape3.calcVolume();
-                    shape3.surfaceArea = shape3.calcSurfaceArea();
+                    shape3.setVolume();
+                    shape3.setSurfaceArea();
                     shape3.outputResults();
                     break;
                 case 4://cone: see prism case for detailed comments
                     shape4.assignSideLengths();
-                    shape4.volume = shape4.calcVolume();
-                    shape4.surfaceArea = shape4.calcSurfaceArea();
+                    shape4.setVolume();
+                    shape4.setSurfaceArea();
                     shape4.outputResults();
                     break;
                 case 5://square based pyramid: see prism case for detailed comments
                     shape5.assignSideLengths();
-                    shape5.volume = shape5.calcVolume();
-                    shape5.surfaceArea = shape5.calcSurfaceArea();
+                    shape5.setVolume();
+                    shape5.setSurfaceArea();
                     shape5.outputResults();
                     break;
                 default://if not within 0-5

@@ -15,14 +15,14 @@ import java.util.InputMismatchException;
 //Superclass Prism
 public class Shape {
     //All essential attributes
-    double depth;
-    double width;
-    double height;
-    double surfaceArea;
-    double volume;
-    String shapeName;
+    protected double depth;
+    protected double width;
+    protected double height;
+    protected double surfaceArea;
+    protected double volume;
+    protected String shapeName;
 
-    //Prism constructor i want name of shape initialized as Prism
+    //Prism constructor I want name of shape as Prism
     public Shape(){
         shapeName = "Prism";
     }
@@ -63,12 +63,12 @@ public class Shape {
        }
     }
 
-    public double calcVolume(){//method to calculate volume
-        return this.depth * this.width * this.height;
+    public void setVolume(){//method to calculate volume
+        this.volume = this.depth * this.width * this.height;
     }
 
-    public double calcSurfaceArea(){//method to calculate surface area
-        return 2 * (this.depth * this.width + this.depth * this.height + this.width * this.height);
+    public void setSurfaceArea(){//method to calculate surface area
+        this.surfaceArea = 2 * (this.depth * this.width + this.depth * this.height + this.width * this.height);
     }
 
     public void outputResults(){//Output the calculated results

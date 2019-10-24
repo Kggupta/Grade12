@@ -10,7 +10,7 @@ package volumessurfacearea;
  * @author keshavgupta
  */
 public class Cone extends Shape{
-    double radius;
+    private double radius;
     
     public Cone(){
         shapeName = "Cone";
@@ -31,12 +31,12 @@ public class Cone extends Shape{
     }
     
     @Override
-    public double calcVolume(){//method to calculate volume
-        return Math.PI * this.radius * this.radius * (this.height / 3);
+    public void setVolume(){//method to calculate volume
+        this.volume = Math.PI * this.radius * this.radius * (this.height / 3);
     }
     
     @Override
-    public double calcSurfaceArea(){//method to calculate surface area
-        return Math.PI * this.radius * (this.radius + Math.sqrt(this.height * this.height + this.radius * this.radius));
+    public void setSurfaceArea(){//method to calculate surface area
+        this.surfaceArea = Math.PI * this.radius * (this.radius + Math.sqrt(this.height * this.height + this.radius * this.radius));
     }
 }

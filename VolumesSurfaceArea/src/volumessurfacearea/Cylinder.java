@@ -10,7 +10,7 @@ package volumessurfacearea;
  * @author keshavgupta
  */
 public class Cylinder extends Shape{
-    double radius;
+    private double radius;
     
     public Cylinder(){
         shapeName = "Cylinder";
@@ -31,12 +31,12 @@ public class Cylinder extends Shape{
     }
     
     @Override
-    public double calcVolume(){//method to calculate volume
-        return Math.PI * this.radius * this.radius * this.height;
+    public void setVolume(){//method to calculate volume
+        this.volume = Math.PI * this.radius * this.radius * this.height;
     }
     
     @Override
-    public double calcSurfaceArea(){//method to calculate surface area
-        return (2 * Math.PI * this.radius * this.radius) + 2 * Math.PI * this.radius * this.height;
+    public void setSurfaceArea(){//method to calculate surface area
+        this.surfaceArea = (2 * Math.PI * this.radius * this.radius) + 2 * Math.PI * this.radius * this.height;
     }
 }

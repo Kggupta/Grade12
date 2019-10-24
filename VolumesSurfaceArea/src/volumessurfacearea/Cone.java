@@ -10,7 +10,7 @@ package volumessurfacearea;
  * @author keshavgupta
  */
 public class Cone extends Shape{
-    double radius;
+    private double radius;
     
     public Cone(){
         shapeName = "Cone";

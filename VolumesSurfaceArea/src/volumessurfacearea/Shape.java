@@ -15,14 +15,14 @@ import java.util.InputMismatchException;
 //Superclass Prism
 public class Shape {
     //All essential attributes
-    double depth;
-    double width;
-    double height;
-    double surfaceArea;
-    double volume;
-    String shapeName;
+    protected double depth;
+    protected double width;
+    protected double height;
+    protected double surfaceArea;
+    protected double volume;
+    protected String shapeName;
 
-    //Prism constructor i want name of shape initialized as Prism
+    //Prism constructor I want name of shape as Prism
     public Shape(){
         shapeName = "Prism";
     }

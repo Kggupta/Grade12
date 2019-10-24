@@ -10,7 +10,7 @@ package volumessurfacearea;
  * @author keshavgupta
  */
 public class Cylinder extends Shape{
-    double radius;
+    private double radius;
     
     public Cylinder(){
         shapeName = "Cylinder";

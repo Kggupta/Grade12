@@ -16,11 +16,11 @@
         - Again, use formula depending on shape with the necessary variables passed as attributes to method
          - Overridden form of the surface area method in "Prism" superclass
     - Calculate perimeter
-    	  - Add all the side lengths based on inputed values
-        - Overridden form of the perimeter method in twoDshape
+    	   - Add all the side lengths based on inputed values
+         - Overridden form of the perimeter method in twoDshape
     - Calculate area
-				- Depending on formula, set value of area
-        - Overridden form of the area method in twoDshape
+				  - Depending on formula, set value of area
+          - Overridden form of the area method in twoDshape
 5. Display Results (volume, surface area or area, perimeter)
 
 ## UML DIAGRAM

@@ -11,7 +11,7 @@ package volumessurfacearea;
  */
 public class SquarePyramid extends Shape{
     
-    public SquarePyramid(){
+    public SquarePyramid(){//Square pyramid constructor
         shapeName = "Square Based Pyramid";
     }
     

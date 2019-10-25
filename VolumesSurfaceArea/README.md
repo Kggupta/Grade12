@@ -21,7 +21,7 @@
     - Calculate area
         - Depending on formula, set value of area
         - Overridden form of the area method in twoDshape
-5. Display Results ([volume and surface] area or [area and perimeter])
+5. Display Results ([volume and surface area] or [area and perimeter])
 
 ## UML DIAGRAM
 [![UML Diagram](https://i.gyazo.com/9c467cac42b4b51a0cafa6d63ca4f289.png)](https://gyazo.com/9c467cac42b4b51a0cafa6d63ca4f289)

@@ -61,6 +61,6 @@ public class TwoDShape {
     }
     
     public void displayResults(){//Send results
-        System.out.format("The %s's area is: %.2f units squared\nThe perimeter of the %s is: %.2f units\n\n", this.twoDShapeName, this.area, this.twoDShapeName, this.perimeter);
+        System.out.format("The %s's area is: %.2f units squared\nThe %s's perimeter is: %.2f units\n\n", this.twoDShapeName, this.area, this.twoDShapeName, this.perimeter);
     }
 }

@@ -15,27 +15,30 @@ import twoDimShapes.*;
  * @author keshavgupta
  */
 public class RunProgram{
-    private static int chooseShape(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("1 : Prism");
-        System.out.println("2 : Sphere");
-        System.out.println("3 : Cylinder");
-        System.out.println("4 : Cone");
-        System.out.println("5 : Square Based Pyramid");
-        System.out.println("0 : Exit");
+    static Scanner input = new Scanner(System.in);
 
+    private static int choose3dShape(){
         int choice;
         while(true){
+            System.out.println("1 : Prism");
+            System.out.println("2 : Sphere");
+            System.out.println("3 : Cylinder");
+            System.out.println("4 : Cone");
+            System.out.println("5 : Square Based Pyramid");
+            System.out.println("0 : To Directory");
             System.out.print("What shape would you like to calculate? ");
+        
             try{
                 choice = input.nextInt();
                 break;
             }catch(InputMismatchException err){
+                input.next();
                 System.out.println("Not a valid Choice.");
             }
         }
         return choice;
     }
+    
     private static void run3dShapes(){
         Shape shape1 = new Shape();//New prism
         Sphere shape2 = new Sphere();//New sphere
@@ -44,10 +47,10 @@ public class RunProgram{
         SquarePyramid shape5 = new SquarePyramid();//New SquarePyramid
 
         while(true){//main code that is running for 3d shapes
-            int option = chooseShape();//get user's choice of shape
+            int option = choose3dShape();//get user's choice of shape
             switch(option){//depending on option, run that shape code
                 case 0://exit
-                    System.exit(0);
+                    directory();
                     break;
                 case 1://prism
                     shape1.assignSideLengths();//assign the prism it's sides
@@ -85,8 +88,101 @@ public class RunProgram{
             }
         }
     }
-
+    
+    private static int choose2dShape(){
+        int choice;
+        while(true){
+            System.out.println("1 : Rectangle");
+            System.out.println("2 : Triangle");
+            System.out.println("3 : Circle");
+            System.out.println("0 : To Directory");
+            System.out.print("What shape would you like to calculate? ");
+            try{
+                choice = input.nextInt();
+                break;
+            }catch(InputMismatchException err){
+                input.next();
+                System.out.println("Not a valid Choice.");
+            }
+        }
+        return choice;
+    }
+    
+    private static void run2dShapes(){
+        TwoDShape twoDShape1 = new TwoDShape();
+        Triangle twoDShape2 = new Triangle();
+        Circle twoDShape3 = new Circle();
+        
+        while(true){
+            int option = choose2dShape();
+            switch(option){
+                case 0:
+                    directory();
+                    break;
+                case 1:
+                    twoDShape1.assignSideLengths();
+                    twoDShape1.setArea();
+                    twoDShape1.setPerimeter();
+                    twoDShape1.displayResults();
+                    break;
+                case 2:
+                    twoDShape2.assignSideLengths();
+                    twoDShape2.setPerimeter();
+                    twoDShape2.setArea();
+                    twoDShape2.displayResults();
+                    break;
+                case 3:
+                    twoDShape3.assignSideLengths();
+                    twoDShape3.setPerimeter();
+                    twoDShape3.setArea();
+                    twoDShape3.displayResults();
+                    break;
+                default:
+                    System.out.println("Invalid Choice");
+            }
+        }
+    }
+    
+    private static int chooseSubProgram(){
+        int choice;
+        while(true){
+            System.out.println("1 : 2D Shapes");
+            System.out.println("2 : 3D Shapes");
+            System.out.println("0 : Exit");
+            System.out.print("What Shape Type do you want to calculate? ");
+        
+            try{
+                choice = input.nextInt();
+                break;
+            }catch(InputMismatchException err){
+                input.next();
+                System.out.println("Not a valid Choice.");
+            }
+        }
+        return choice;
+    }
+    
+    private static void directory(){
+        while(true){
+            int option = chooseSubProgram();
+            switch(option){
+                case 0:
+                    System.exit(0);
+                    break;
+                case 1:
+                    run2dShapes();
+                    break;
+                case 2:
+                    run3dShapes();
+                    break;
+                default:
+                    System.out.println("Invalid Choice");
+                    break;
+            }
+        }
+    }
+    
     public static void main(String[] args) {//Main code
-        run3dShapes();
+        directory();
     }
 }

@@ -28,7 +28,7 @@ public class Shape {
     }
 
     //Helper Method to get sideLengths
-    public double getSideLength(String prompt){//Takes in a prompt to specify what is being asked for
+    protected double getSideLength(String prompt){//Takes in a prompt to specify what is being asked for
         System.out.print(prompt);//Print prompt to console
         Scanner input = new Scanner(System.in);//scanner as alias input
         double sideLength;//variable to store the input

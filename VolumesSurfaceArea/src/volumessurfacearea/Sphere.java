@@ -10,7 +10,7 @@ package volumessurfacearea;
  * @author keshavgupta
  */
 public class Sphere extends Shape{
-    private double radius;
+    private double radius;//Radius attribute
     
     public Sphere(){
         shapeName = "Sphere";

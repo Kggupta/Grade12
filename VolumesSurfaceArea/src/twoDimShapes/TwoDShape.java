@@ -12,13 +12,13 @@ import java.util.InputMismatchException;
  * @author keshavgupta
  */
 public class TwoDShape {
-    protected double length;
+    protected double length;//Declare attributes
     protected double height;
     protected String twoDShapeName;
     protected double area;
     protected double perimeter;
     
-    public TwoDShape(){
+    public TwoDShape(){//Rectangle constructor
         twoDShapeName = "Rectangle";
     }
     
@@ -52,15 +52,15 @@ public class TwoDShape {
        }
     }
     
-    public void setArea(){
+    public void setArea(){//Calc area b * h
         this.area = this.length * this.height;
     }
     
-    public void setPerimeter(){
+    public void setPerimeter(){//get perimeter 2(b + h)
         this.perimeter = 2 * this.length + 2 * this.height;
     }
     
-    public void displayResults(){
+    public void displayResults(){//Send results
         System.out.format("The %s's area is: %.2f units squared\nThe perimeter of the %s is: %.2f units\n\n", this.twoDShapeName, this.area, this.twoDShapeName, this.perimeter);
     }
 }

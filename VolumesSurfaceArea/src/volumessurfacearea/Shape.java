@@ -51,12 +51,12 @@ public class Shape {
             if (this.height > 0) break;//if it is a valid side length (non negative value) end loop
             else System.out.println("The Side Length cannot be less than 0.");//if it is an invalid sideLength, go back to getSideLength method
        }
-       while(true){//see line 49
+       while(true){//see first while
             this.width = getSideLength("What is the width of the Prism? ");
             if (this.width > 0) break;
             else System.out.println("The Side Length cannot be less than 0.");
        }
-       while(true){//see line 49
+       while(true){//see first while
             this.depth = getSideLength("What is the depth of the Prism? ");
             if (this.depth > 0) break;
             else System.out.println("The Side Length cannot be less than 0.");

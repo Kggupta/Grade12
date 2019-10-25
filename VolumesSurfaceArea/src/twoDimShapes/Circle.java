@@ -9,6 +9,27 @@ package twoDimShapes;
  *
  * @author keshavgupta
  */
-public class Circle extends twoDShape{
+public class Circle extends TwoDShape{
+    public Circle(){
+        twoDShapeName = "Circle";
+    }    
     
+    @Override
+    public void assignSideLengths(){
+            while(true){//get radius
+                 this.length = getSideLength("What is the radius of the circle? ");//assign returned sideLength to the object radius attribute
+                 if (this.length > 0) break;//if it is a valid side length (non negative value) end loop
+                 else System.out.println("The raidus cannot be less than 0.");//if it is an invalid sideLength, go back to getSideLength method
+            }
+    }
+    
+    @Override
+    public void setArea(){
+        this.area = 2 * Math.PI * this.length * this.length;
+    }
+    
+    @Override
+    public void setPerimeter(){
+        this.perimeter = 2 * Math.PI * this.length;
+    }
 }

@@ -16,7 +16,7 @@ public class Q1_2 {
     enum WorkType{
         TEST, ASSIGNMENT, LAB;
     }
-    
+    protected File url = new File("./src/q1_2/stored.txt");
     protected String work;
     protected WorkType type;
     protected static int line = 1;
@@ -55,7 +55,7 @@ public class Q1_2 {
     }
     
     protected void writeFile(int lineno) throws IOException {
-        File f=new File("/Users/keshavgupta/Desktop/ICS/Grade12/AdvancedConcepts/Q1/src/q1_2/stored.txt");
+        File f=new File(url.getPath());
         FileWriter fw = new FileWriter(f,true);
         BufferedWriter bw = new BufferedWriter(fw);
         LineNumberReader  lnr = new LineNumberReader(new FileReader(f));

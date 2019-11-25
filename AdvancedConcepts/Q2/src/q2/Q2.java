@@ -10,7 +10,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.List;
 import java.nio.file.*;
-
 /**
  *
  * @author keshavgupta
@@ -19,6 +18,7 @@ public class Q2 {
     enum WorkType{
         TEST, ASSIGNMENT, LAB, PRESENTATION;
     }
+    File url = new File("./src/q2/work.txt");
     String workMsg;
     WorkType workType;
     int line = 1;
@@ -58,7 +58,7 @@ public class Q2 {
     }
     
     protected void writeFile(int lineno) throws IOException {
-        File f=new File("/Users/keshavgupta/Desktop/ICS/Grade12/AdvancedConcepts/Q2/src/q2/work.txt");
+        File f=new File(url.getPath());
         FileWriter fw = new FileWriter(f,true);
         BufferedWriter bw = new BufferedWriter(fw);
         LineNumberReader  lnr = new LineNumberReader(new FileReader(f));
@@ -74,9 +74,12 @@ public class Q2 {
         boolean done = false;
         int choice;
         while(!done){
-            choice = WorkValsChecker("\n------------\nMAIN DIRECTORY\n0. Sort Work File\n1. TEST\n2. ASSIGNMENT\n3. LAB\n4. PRESENTATION\n5. Find Work By Type\nWhat is the Work? ");
+            choice = WorkValsChecker("\n------------\nMAIN DIRECTORY\n-1. Exit\n0. Sort Work File\n1. TEST\n2. ASSIGNMENT\n3. LAB\n4. PRESENTATION\n5. Find Work By Type\nWhat is the Work? ");
             this.posnum = choice;
             switch(choice){
+                case -1:
+                    System.exit(0);
+                    break;
                 case 1:
                     this.workType = WorkType.TEST;
                     done = true;
@@ -109,8 +112,8 @@ public class Q2 {
     
     protected void searchFileWork() throws IOException{
         String categoryWork="\nWORK UNDER THAT CATEGORY\n--------\n";
-        List<String> result = Files.readAllLines(Paths.get("/Users/keshavgupta/Desktop/ICS/Grade12/AdvancedConcepts/Q2/src/q2/work.txt"));
-        int requested = WorkValsChecker("What Work Type do you want to find? (1-4)");
+        List<String> result = Files.readAllLines(Paths.get(url.getPath()));
+        int requested = WorkValsChecker("What Work Type do you want to find? (1-4) ");
         for (String i : result){
             if(Character.getNumericValue(i.charAt(0)) == requested){
                 categoryWork += (i + "\n");
@@ -120,11 +123,10 @@ public class Q2 {
     }
     
     protected void setMessage(){
-        this.workMsg = this.posnum + ". " + this.workType.toString() + " " + setMessage("What is the title? ");
+        this.workMsg = this.posnum + ". " + this.workType.toString() + " - " + setMessage("What is the title? ");
     }
     
     protected void adderDirectory() throws IOException{
-        
         do{
             this.setWorkType();
             this.setMessage();
@@ -134,9 +136,9 @@ public class Q2 {
     }
     
     protected void readFile() throws IOException{
-        List<String> result = Files.readAllLines(Paths.get("/Users/keshavgupta/Desktop/ICS/Grade12/AdvancedConcepts/Q2/src/q2/work.txt"));
+        List<String> result = Files.readAllLines(Paths.get(url.getPath()));
         this.sorter(result, result.size());
-        File fout = new File("/Users/keshavgupta/Desktop/ICS/Grade12/AdvancedConcepts/Q2/src/q2/work.txt");
+        File fout = new File(url.getPath());
 	FileOutputStream fos = new FileOutputStream(fout);
  
 	BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));

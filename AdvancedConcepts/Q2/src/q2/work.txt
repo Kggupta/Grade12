@@ -1,7 +1,10 @@
-1. TEST test
-1. TEST Big test
-2. ASSIGNMENT assign
-2. ASSIGNMENT Huge assignement
-3. LAB lab lab lab
-4. PRESENTATION presprespres pres
-4. PRESENTATION GIGA PRESENTATION!!!!
+1. TEST - test
+1. TEST - Big test
+1. TEST - asdfasdfasdf
+2. ASSIGNMENT - assign
+2. ASSIGNMENT - Huge assignement
+3. LAB - lab lab lab
+3. LAB - asdf!
+4. PRESENTATION - presprespres pres
+4. PRESENTATION - GIGA PRESENTATION!!!!
+1. TEST - asdffffff
